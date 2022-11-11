@@ -1,0 +1,44 @@
+.taskCompleted, .taskIncompleted {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  text-align: justify;
+  padding: 1rem;
+  border-radius: 7px;
+
+  margin-bottom: .7rem;
+  background-color: #333333;
+
+  button {
+    border: none;
+    background: none;
+  }
+
+  .btnTrash {
+    color: #808080;
+  }
+
+  p {
+    width: 90%;
+    margin: 0 1rem;
+  }
+
+}
+
+.taskCompleted {
+  .btnCircle svg {
+    border-radius: 50%;
+    background-color: #5E60CE;
+  }
+
+  p {
+    text-decoration: line-through;
+    color: #808080;
+  }
+}
+
+.taskIncompleted {
+  .btnCircle {
+    color: #4EA8DE;
+  }
+}

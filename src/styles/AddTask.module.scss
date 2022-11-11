@@ -1,0 +1,38 @@
+.container {
+  margin-top: -1.5rem;
+  height: 3rem;
+  display: flex;
+
+  input {
+    height: 100%;
+    width: 638px;
+    background-color: #262626;
+    color: #808080;
+
+    font-size: 1rem;
+
+    border: none;
+    border-radius: 6px;
+
+    padding-left: 1rem;
+
+  }
+
+  button {
+    height: 100%;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .8rem;
+    color: aliceblue;
+    background-color: #1E6F9F;
+    border-radius: 7px;
+    margin-left: .5rem;
+    
+    cursor: pointer;
+    &:hover {
+      background-color: #123f58;
+    }
+  }
+}
