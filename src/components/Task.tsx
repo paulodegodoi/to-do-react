@@ -1,5 +1,4 @@
 import { Circle, CheckCircle, Trash } from 'phosphor-react'
-import cx from 'classnames';
 
 import styles from '../styles/Task.module.scss'
 
@@ -23,21 +22,6 @@ export const Task = ({id, name, completed, changeTaskStatus, deleteTask}: PropsT
           <CheckCircle size={24} /> : <Circle size={24} />
         }
       </button>
-      {/* {completed ?
-        <button 
-          className={styles.circleStatusCompleted}
-          onClick={() => changeTaskStatus(id)}
-        >
-          <CheckCircle size={24} />
-        </button>
-      : 
-        <button 
-          className={styles.circleStatusIncompleted}
-          onClick={() => changeTaskStatus(id)}
-        >
-          <Circle size={24} />
-        </button>
-      } */}
       <p>{name}</p>
       <button 
         className={styles.btnTrash} 

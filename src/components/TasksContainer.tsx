@@ -1,9 +1,8 @@
 import styles from '../styles/TasksContainer.module.scss'
 import Clipboard from '../assets/Clipboard.png'
-import { AddTask } from './AddTask'
 
 import Plus from "../assets/plus.png"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Task } from './Task'
 
 interface ITaskProps {
@@ -13,30 +12,12 @@ interface ITaskProps {
 }
 
 export const TasksContainer = () => {
-  const tasks = [
-    {
-      id: 1,
-      name: 'Primeira tarefa',
-      completed: false,
-    },
-    {
-      id: 2,
-      name: 'Segunda tarefa',
-      completed: false,
-    },
-    {
-      id: 3,
-      name: 'Última tarefa',
-      completed: false,
-    }
-  ]
 
   const [nameTask, setNameTask] = useState("")
-  const [allTasks, setAllTasks] = useState<ITaskProps[]>(tasks)
-  const [taskStatus, setTaskStatus] = useState<any>()
+  const [allTasks, setAllTasks] = useState<ITaskProps[]>([])
 
   let completedTasksAmount = 0
-  
+
   allTasks.forEach(task => {
     if (task.completed == true) {
       completedTasksAmount += 1
@@ -45,7 +26,7 @@ export const TasksContainer = () => {
 
   function createTask(task: string) {
     const newTask = {
-      id: 4,
+      id: allTasks.length,
       name: nameTask,
       completed: false
     }
